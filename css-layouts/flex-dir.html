@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Flex Direction</title>
+
+        <style>
+            body {
+                padding: 2rem;
+                font-family: sans-serif;
+                display: flex;
+                flex-direction: row;
+            }
+
+            h1 {
+                font-family: monospace;
+            }
+
+            span {
+                font-size: 2rem;
+                padding: 1rem;
+                background-color: blue;
+                color: white;
+                aspect-ratio: 1 / 1;
+                width: 4rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container {
+                width: fit-content;
+                height: fit-content;
+                padding: 1rem;
+                border: 1px solid black;
+                display: flex;
+                gap: 0.5rem;
+            }
+
+            .row {
+                flex-direction: row;
+            }
+
+            .row-reverse {
+                flex-direction: row-reverse;
+            }
+
+            .column {
+                flex-direction: column;
+            }
+
+            .column-reverse {
+                flex-direction: column-reverse;
+            }
+        </style>
+    </head>
+
+    <body
+        style="
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        "
+    >
+        <div style="display: flex; flex-direction: column; align-items: center">
+            <div>
+                <h1>row</h1>
+                <div class="container row">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                </div>
+                <br /><br />
+            </div>
+
+            <div>
+                <h1>row-reverse</h1>
+                <div class="container row-reverse">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                </div>
+                <br /><br />
+            </div>
+        </div>
+
+        <div
+            style="
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 5rem;
+            "
+        >
+            <div>
+                <h1>column</h1>
+                <div class="container column">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                </div>
+            </div>
+
+            <div>
+                <h1>column-reverse</h1>
+                <div class="container column-reverse">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
